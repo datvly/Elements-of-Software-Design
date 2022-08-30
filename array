@@ -1,0 +1,44 @@
+a = [2, 3, 4, 5]
+b = [1, 1, 1, 1]
+c = [item - x for x in b for item in a ] 
+
+
+
+#method 1
+# b = []
+# for item in a:
+    # b.append(item**2)
+    
+#method 2
+b = [item**2 for item in a]
+
+#method 3
+b = list(map(lambda x: x**2, a))
+print(b)
+
+
+
+a = [2, 3, 4, 5]
+b = a.copy()
+
+a[1] = 1000
+
+print (b)
+
+#now 2d list
+a = [[2, 3], [4, 5]]
+b = a.copy()
+
+a[1][1] = 1000
+
+print (b)
+
+
+#shalow copy vs deep copy
+import copy
+a = [[2, 3], [4, 5]]
+b = copy.copy(a)
+
+a[1][1] = 1000
+
+print (b)
